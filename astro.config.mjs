@@ -5,10 +5,10 @@ import sitemap from "@astrojs/sitemap";
 // https://astro.build/config
 export default defineConfig({
   integrations: [
-    tailwind(), 
+    tailwind(),
     sitemap({
-      filter: (page) => !page.includes('/404')
-    })
+      filter: (page) => !page.includes("/404"),
+    }),
   ],
   site: "https://knowledge-bridge.com",
   build: {
