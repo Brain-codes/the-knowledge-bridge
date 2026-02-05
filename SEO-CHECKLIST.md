@@ -3,6 +3,7 @@
 ## ✅ Implemented
 
 ### Meta Tags
+
 - ✅ Primary meta tags (title, description, keywords)
 - ✅ Open Graph tags (Facebook/LinkedIn sharing)
 - ✅ Twitter Card tags
@@ -12,6 +13,7 @@
 - ✅ Viewport meta tag with minimum-scale
 
 ### Structured Data (JSON-LD)
+
 - ✅ Organization schema
 - ✅ WebSite schema
 - ✅ WebPage schema
@@ -19,6 +21,7 @@
 - ✅ Social media links (LinkedIn)
 
 ### Favicons & Icons
+
 - ✅ favicon.svg (vector)
 - ✅ favicon.ico (fallback)
 - ✅ manifest.json (PWA configuration)
@@ -27,12 +30,14 @@
 - ⚠️ android-chrome-512x512.png - **Needs creation**
 
 ### Site Configuration
+
 - ✅ robots.txt (allows all crawlers)
 - ✅ Automatic sitemap generation (via @astrojs/sitemap)
 - ✅ Site URL configured in astro.config.mjs
 - ✅ HTML compression enabled
 
 ### Content & Accessibility
+
 - ✅ Semantic HTML structure
 - ✅ Alt text on most images
 - ✅ ARIA labels where appropriate
@@ -42,6 +47,7 @@
 ## 📋 To-Do
 
 ### Images to Create
+
 You need to create these icon files and place them in `/public/`:
 
 1. **apple-touch-icon.png** (180×180px)
@@ -86,18 +92,20 @@ You need to create these icon files and place them in `/public/`:
 ## 🔍 How to Generate Icons
 
 **Option 1: Online Tool**
+
 - Use https://realfavicongenerator.net/
 - Upload your logo
 - Download the generated icon pack
 
 **Option 2: Manual Creation**
+
 - Use Figma/Photoshop/GIMP
 - Export your logo at required sizes
 - Ensure transparent or solid background
 
 ## 🚀 Next Steps
 
-1. Create the missing icon files (apple-touch-icon.png, android-chrome-*.png)
+1. Create the missing icon files (apple-touch-icon.png, android-chrome-\*.png)
 2. Verify og-image.jpg is 1200×630px and looks good
 3. Test social sharing on Facebook/LinkedIn/Twitter
 4. Submit sitemap to Google Search Console
