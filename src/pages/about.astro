@@ -57,7 +57,7 @@ const valuesContent = {
         class="py-12 min-[320px]:py-16 min-[400px]:py-20 sm:py-24 md:py-28 lg:py-32"
       >
         <div class="max-w-4xl mx-auto text-center">
-          <div class="flex justify-center mb-6 min-[320px]:mb-8 min-[400px]:mb-10">
+          <div class="flex justify-center mb-6 min-[320px]:mb-8 min-[400px]:mb-10" data-aos="fade-down">
             <svg width="47" height="46" viewBox="0 0 47 46" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M46.6601 22.9999C46.8808 22.9979 47 23 47 23C47 23 46.8806 23.0017 46.6601 22.9999C44.7835 23.0164 35.5656 23.3221 29.8233 27.6371C23.9488 32.0515 23.6097 43.7706 23.5944 45.7225C23.5959 45.9031 23.5944 46 23.5944 46C23.5944 46 23.593 45.903 23.5944 45.7225C23.5797 43.889 23.2586 33.4281 17.9317 28.1935C12.9209 23.2696 3.34226 22.9703 0.693615 22.9859C0.249828 23 0 23 0 23C0 23 0.249292 22.9885 0.693615 22.9859C3.43078 22.8989 13.5464 22.2754 17.9317 17.8065C23.0281 12.6129 23.5944 0 23.5944 0C23.5944 0 23.7831 12.0565 28.8795 17.621C33.4879 22.6526 44.5783 22.9828 46.6601 22.9999Z" fill="#005E02"/>
             </svg>
@@ -67,7 +67,7 @@ const valuesContent = {
             font-bold text-primary-green
             text-2xl min-[320px]:text-3xl min-[400px]:text-4xl sm:text-5xl md:text-6xl lg:text-7xl
             leading-tight mb-6 min-[320px]:mb-8
-          ">
+          " data-aos="fade-up" data-aos-delay="100">
             About The Knowledge Bridge
           </h1>
           
@@ -75,7 +75,7 @@ const valuesContent = {
             font-normal text-primary-text
             text-sm min-[320px]:text-base min-[400px]:text-lg sm:text-xl md:text-2xl
             leading-relaxed
-          ">
+          " data-aos="fade-up" data-aos-delay="200">
             Bridging the gap between insight and impact
           </p>
         </div>
@@ -89,7 +89,7 @@ const valuesContent = {
         padding="lg"
         class="py-12 min-[320px]:py-16 min-[400px]:py-20 sm:py-24 md:py-28 lg:py-32"
       >
-        <div class="max-w-4xl mx-auto">
+        <div class="max-w-4xl mx-auto" data-aos="fade-up">
           <ContentBlock 
             title={missionContent.title}
             description={missionContent.description}
@@ -107,7 +107,7 @@ const valuesContent = {
       >
         <div class="flex flex-col gap-12 min-[320px]:gap-16 min-[400px]:gap-20 sm:gap-24">
           <!-- Section Header -->
-          <div class="flex items-center gap-4 min-[320px]:gap-5">
+          <div class="flex items-center gap-4 min-[320px]:gap-5" data-aos="fade-right">
             <div class="flex-shrink-0">
               <img
                 src="/images/star-icon-light.svg"
@@ -128,7 +128,7 @@ const valuesContent = {
           <!-- Approach Cards Grid -->
           <div class="grid grid-cols-1 md:grid-cols-2 gap-6 min-[320px]:gap-8 min-[400px]:gap-10 sm:gap-12 md:gap-14">
             {approachSections.map((section) => (
-              <div class="flex flex-col gap-3 min-[320px]:gap-4">
+              <div class="flex flex-col gap-3 min-[320px]:gap-4" data-aos="fade-up">
                 <h3 class="
                   font-semibold text-primary-light
                   text-base min-[320px]:text-lg min-[400px]:text-xl sm:text-2xl
@@ -156,7 +156,7 @@ const valuesContent = {
         padding="lg"
         class="py-12 min-[320px]:py-16 min-[400px]:py-20 sm:py-24 md:py-28 lg:py-32"
       >
-        <div class="max-w-4xl mx-auto">
+        <div class="max-w-4xl mx-auto" data-aos="fade-up">
           <ContentBlock 
             title={valuesContent.title}
             description={valuesContent.description}
@@ -179,7 +179,7 @@ const valuesContent = {
           py-10 min-[320px]:py-12 min-[400px]:py-16 sm:py-20 md:py-24
           flex flex-col items-center justify-center text-center
           gap-6 min-[320px]:gap-8
-        ">
+        " data-aos="zoom-in">
           <h2 class="
             font-semibold text-primary-green
             text-xl min-[320px]:text-2xl min-[400px]:text-3xl sm:text-4xl md:text-5xl

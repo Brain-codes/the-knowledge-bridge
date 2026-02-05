@@ -7,7 +7,7 @@ interface Props {
 const { text, class: className = '' } = Astro.props;
 ---
 
-<div class={`flex items-center justify-center gap-3 min-[320px]:gap-4 min-[400px]:gap-5 sm:gap-6 md:gap-7 ${className}`}>
+<div class={`flex items-center justify-center gap-3 min-[320px]:gap-4 min-[400px]:gap-5 sm:gap-6 md:gap-7 ${className}`} data-aos="fade-up">
   <!-- Check Icon -->
   <div class="flex-shrink-0">
     <svg 

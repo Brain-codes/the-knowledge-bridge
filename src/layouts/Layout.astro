@@ -118,8 +118,23 @@ const jsonLd = {
     
     <!-- Clash Display Font -->
     <link href="https://api.fontshare.com/v2/css?f[]=clash-display@200,400,700,600,500,300&display=swap" rel="stylesheet" />
+    
+    <!-- AOS Animation CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   </head>
   <body class="min-h-screen bg-white text-gray-900 antialiased font-clash">
     <slot />
+    
+    <!-- AOS Animation JS -->
+    <script is:inline src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script is:inline>
+      AOS.init({
+        duration: 800,
+        easing: 'ease-in-out',
+        once: true,
+        mirror: false,
+        offset: 100
+      });
+    </script>
   </body>
 </html>
