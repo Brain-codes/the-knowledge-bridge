@@ -1,0 +1,68 @@
+---
+import Logo from './Logo.astro';
+import NavLink from './NavLink.astro';
+import MobileMenuButton from './MobileMenuButton.astro';
+
+interface Props {
+  class?: string;
+}
+
+const { class: className = '' } = Astro.props;
+
+// Get current path to determine active link
+const currentPath = Astro.url.pathname;
+
+const navLinks = [
+  { href: '/', label: 'Home' },
+  { href: '/about', label: 'About' },
+  { href: '/contact', label: 'Contact' },
+];
+---
+
+<nav class={`fixed top-0 left-0 right-0 z-50 bg-white border-b border-primary-green/20 ${className}`}>
+  <!-- Desktop & Tablet Navigation -->
+  <div class="
+    px-2 min-[320px]:px-3 min-[400px]:px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-24
+    py-3 min-[320px]:py-4 sm:py-5 md:py-6
+  ">
+    <div class="flex items-center justify-between gap-2 min-[320px]:gap-4">
+      <!-- Logo -->
+      <a href="/" class="flex-shrink-0">
+        <Logo />
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <div class="hidden md:flex items-center gap-6 lg:gap-8 xl:gap-12">
+        {navLinks.map(link => (
+          <NavLink href={link.href} isActive={currentPath === link.href}>
+            {link.label}
+          </NavLink>
+        ))}
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <MobileMenuButton />
+    </div>
+  </div>
+
+  <!-- Mobile Navigation Menu -->
+  <div
+    id="mobile-menu"
+    class="hidden md:hidden border-t border-primary-green/20 bg-white"
+  >
+    <div class="
+      px-2 min-[320px]:px-3 min-[400px]:px-4 sm:px-6
+      py-3 min-[320px]:py-4
+      flex flex-col gap-3 min-[320px]:gap-4
+    ">
+      {navLinks.map(link => (
+        <NavLink href={link.href} isActive={currentPath === link.href} class="py-1">
+          {link.label}
+        </NavLink>
+      ))}
+    </div>
+  </div>
+</nav>
+
+<!-- Spacer to prevent content from going under fixed navbar -->
+<div class="h-[60px] min-[320px]:h-[72px] min-[400px]:h-[84px] sm:h-[96px] md:h-[119px]"></div>

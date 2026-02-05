@@ -1,0 +1,54 @@
+---
+interface Props {
+  name: string;
+  label: string;
+  placeholder?: string;
+  rows?: number;
+  required?: boolean;
+  class?: string;
+}
+
+const { 
+  name,
+  label,
+  placeholder = '',
+  rows = 5,
+  required = false,
+  class: className = ''
+} = Astro.props;
+---
+
+<div class={`flex flex-col gap-2 min-[320px]:gap-3 ${className}`}>
+  <label 
+    for={name}
+    class="
+      font-medium text-primary-text
+      text-xs min-[320px]:text-sm min-[400px]:text-base
+    "
+  >
+    {label}
+    {required && <span class="text-primary-green">*</span>}
+  </label>
+  
+  <textarea
+    id={name}
+    name={name}
+    placeholder={placeholder}
+    rows={rows}
+    required={required}
+    class="
+      w-full
+      px-3 min-[320px]:px-4 min-[400px]:px-5 sm:px-6
+      py-2 min-[320px]:py-2.5 min-[400px]:py-3 sm:py-3.5
+      border border-primary-green/30
+      rounded-md min-[320px]:rounded-lg
+      text-primary-text
+      text-xs min-[320px]:text-sm min-[400px]:text-base sm:text-lg
+      placeholder:text-primary-text/50
+      focus:outline-none focus:border-primary-green focus:ring-2 focus:ring-primary-green/20
+      transition-all duration-200
+      resize-vertical
+      min-h-[120px]
+    "
+  ></textarea>
+</div>

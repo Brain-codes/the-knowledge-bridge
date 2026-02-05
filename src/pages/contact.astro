@@ -1,0 +1,243 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/navbar/Navbar.astro';
+import Container from '../components/ui/Container.astro';
+import FormInput from '../components/forms/FormInput.astro';
+import FormTextarea from '../components/forms/FormTextarea.astro';
+import Footer from '../components/footer/Footer.astro';
+
+const seo = {
+  title: "Contact Us",
+  description: "Get in touch with The Knowledge Bridge. Let's discuss how we can support your organization in moving from insight to action.",
+  keywords: "contact knowledge bridge, get in touch, consulting inquiry, partnership",
+};
+
+const contactInfo = [
+  {
+    title: "Email",
+    value: "hello@knowledgebridge.com",
+    href: "mailto:hello@knowledgebridge.com"
+  },
+  {
+    title: "LinkedIn",
+    value: "The Knowledge Bridge",
+    href: "https://www.linkedin.com/company/knowledge-bridge"
+  }
+];
+---
+
+<Layout 
+  title={seo.title}
+  description={seo.description}
+  keywords={seo.keywords}
+>
+  <Navbar />
+  
+  <main class="relative">
+    <!-- Hero Section -->
+    <section class="w-full bg-primary-light/10 pt-[60px] min-[320px]:pt-[72px] min-[400px]:pt-[84px] sm:pt-[96px] md:pt-[119px]">
+      <Container 
+        maxWidth="full" 
+        padding="lg"
+        class="py-12 min-[320px]:py-16 min-[400px]:py-20 sm:py-24 md:py-28 lg:py-32"
+      >
+        <div class="max-w-4xl mx-auto text-center">
+          <div class="flex justify-center mb-6 min-[320px]:mb-8 min-[400px]:mb-10">
+            <svg width="47" height="46" viewBox="0 0 47 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M46.6601 22.9999C46.8808 22.9979 47 23 47 23C47 23 46.8806 23.0017 46.6601 22.9999C44.7835 23.0164 35.5656 23.3221 29.8233 27.6371C23.9488 32.0515 23.6097 43.7706 23.5944 45.7225C23.5959 45.9031 23.5944 46 23.5944 46C23.5944 46 23.593 45.903 23.5944 45.7225C23.5797 43.889 23.2586 33.4281 17.9317 28.1935C12.9209 23.2696 3.34226 22.9703 0.693615 22.9859C0.249828 23 0 23 0 23C0 23 0.249292 22.9885 0.693615 22.9859C3.43078 22.8989 13.5464 22.2754 17.9317 17.8065C23.0281 12.6129 23.5944 0 23.5944 0C23.5944 0 23.7831 12.0565 28.8795 17.621C33.4879 22.6526 44.5783 22.9828 46.6601 22.9999Z" fill="#005E02"/>
+            </svg>
+          </div>
+          
+          <h1 class="
+            font-bold text-primary-green
+            text-2xl min-[320px]:text-3xl min-[400px]:text-4xl sm:text-5xl md:text-6xl lg:text-7xl
+            leading-tight mb-6 min-[320px]:mb-8
+          ">
+            Let's Connect
+          </h1>
+          
+          <p class="
+            font-normal text-primary-text
+            text-sm min-[320px]:text-base min-[400px]:text-lg sm:text-xl md:text-2xl
+            leading-relaxed
+          ">
+            Ready to bridge the gap between insight and action? Reach out to discuss how we can support your organization.
+          </p>
+        </div>
+      </Container>
+    </section>
+
+    <!-- Contact Form & Info Section -->
+    <section class="w-full bg-white">
+      <Container 
+        maxWidth="full" 
+        padding="lg"
+        class="py-12 min-[320px]:py-16 min-[400px]:py-20 sm:py-24 md:py-28 lg:py-32"
+      >
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 min-[320px]:gap-16 min-[400px]:gap-20 sm:gap-24 md:gap-28 lg:gap-32">
+          <!-- Contact Form -->
+          <div class="w-full">
+            <div class="flex items-center gap-3 min-[320px]:gap-4 mb-8 min-[320px]:mb-10 min-[400px]:mb-12">
+              <svg width="47" height="46" viewBox="0 0 47 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M46.6601 22.9999C46.8808 22.9979 47 23 47 23C47 23 46.8806 23.0017 46.6601 22.9999C44.7835 23.0164 35.5656 23.3221 29.8233 27.6371C23.9488 32.0515 23.6097 43.7706 23.5944 45.7225C23.5959 45.9031 23.5944 46 23.5944 46C23.5944 46 23.593 45.903 23.5944 45.7225C23.5797 43.889 23.2586 33.4281 17.9317 28.1935C12.9209 23.2696 3.34226 22.9703 0.693615 22.9859C0.249828 23 0 23 0 23C0 23 0.249292 22.9885 0.693615 22.9859C3.43078 22.8989 13.5464 22.2754 17.9317 17.8065C23.0281 12.6129 23.5944 0 23.5944 0C23.5944 0 23.7831 12.0565 28.8795 17.621C33.4879 22.6526 44.5783 22.9828 46.6601 22.9999Z" fill="#005E02"/>
+              </svg>
+              <h2 class="
+                font-medium text-primary-text
+                text-lg min-[320px]:text-xl min-[400px]:text-2xl sm:text-3xl md:text-4xl
+                leading-tight
+              ">
+                Send Us a Message
+              </h2>
+            </div>
+
+            <form id="contact-form" class="flex flex-col gap-5 min-[320px]:gap-6 min-[400px]:gap-7 sm:gap-8">
+              <FormInput 
+                type="text"
+                name="name"
+                label="Full Name"
+                placeholder="John Doe"
+                required
+              />
+
+              <FormInput 
+                type="email"
+                name="email"
+                label="Email Address"
+                placeholder="john@example.com"
+                required
+              />
+
+              <FormInput 
+                type="text"
+                name="organization"
+                label="Organization"
+                placeholder="Your Organization Name"
+              />
+
+              <FormTextarea 
+                name="message"
+                label="Message"
+                placeholder="Tell us about your needs and how we can help..."
+                rows={6}
+                required
+              />
+
+              <button
+                type="submit"
+                class="
+                  w-full
+                  bg-primary-text
+                  text-white
+                  font-bold
+                  px-6 min-[320px]:px-8 min-[400px]:px-10
+                  py-3 min-[320px]:py-3.5 min-[400px]:py-4 sm:py-5
+                  rounded-md min-[320px]:rounded-lg
+                  text-sm min-[320px]:text-base min-[400px]:text-lg sm:text-xl
+                  transition-all duration-200
+                  hover:bg-primary-green hover:scale-105
+                  active:scale-95
+                "
+              >
+                Send Message
+              </button>
+            </form>
+
+            <script>
+              document.getElementById('contact-form')?.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                const form = e.target as HTMLFormElement;
+                const formData = new FormData(form);
+                
+                const name = formData.get('name') as string;
+                const email = formData.get('email') as string;
+                const organization = formData.get('organization') as string || 'Not provided';
+                const message = formData.get('message') as string;
+                
+                const subject = `Inquiry from ${name}`;
+                const body = `Name: ${name}
+Email: ${email}
+Organization: ${organization}
+
+Message:
+${message}`;
+                
+                const mailtoLink = `mailto:hello@knowledgebridge.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+                
+                window.location.href = mailtoLink;
+              });
+            </script>
+          </div>
+
+          <!-- Contact Information -->
+          <div class="w-full flex flex-col justify-center gap-12 min-[320px]:gap-14 min-[400px]:gap-16 sm:gap-20">
+            <div>
+              <div class="flex items-center gap-3 min-[320px]:gap-4 mb-6 min-[320px]:mb-8">
+                <svg width="47" height="46" viewBox="0 0 47 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M46.6601 22.9999C46.8808 22.9979 47 23 47 23C47 23 46.8806 23.0017 46.6601 22.9999C44.7835 23.0164 35.5656 23.3221 29.8233 27.6371C23.9488 32.0515 23.6097 43.7706 23.5944 45.7225C23.5959 45.9031 23.5944 46 23.5944 46C23.5944 46 23.593 45.903 23.5944 45.7225C23.5797 43.889 23.2586 33.4281 17.9317 28.1935C12.9209 23.2696 3.34226 22.9703 0.693615 22.9859C0.249828 23 0 23 0 23C0 23 0.249292 22.9885 0.693615 22.9859C3.43078 22.8989 13.5464 22.2754 17.9317 17.8065C23.0281 12.6129 23.5944 0 23.5944 0C23.5944 0 23.7831 12.0565 28.8795 17.621C33.4879 22.6526 44.5783 22.9828 46.6601 22.9999Z" fill="#005E02"/>
+                </svg>
+                <h2 class="
+                  font-medium text-primary-text
+                  text-lg min-[320px]:text-xl min-[400px]:text-2xl sm:text-3xl md:text-4xl
+                  leading-tight
+                ">
+                  Get in Touch
+                </h2>
+              </div>
+
+              <div class="flex flex-col gap-6 min-[320px]:gap-7 min-[400px]:gap-8 sm:gap-10">
+                {contactInfo.map((info) => (
+                  <div class="flex flex-col gap-2 min-[320px]:gap-3">
+                    <h3 class="
+                      font-semibold text-primary-text
+                      text-sm min-[320px]:text-base min-[400px]:text-lg
+                    ">
+                      {info.title}
+                    </h3>
+                    <a 
+                      href={info.href}
+                      target={info.href.startsWith('http') ? '_blank' : undefined}
+                      rel={info.href.startsWith('http') ? 'noopener noreferrer' : undefined}
+                      class="
+                        font-normal text-primary-green
+                        text-xs min-[320px]:text-sm min-[400px]:text-base sm:text-lg
+                        hover:underline transition-all
+                      "
+                    >
+                      {info.value}
+                    </a>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <!-- Additional Info Box -->
+            <div class="
+              bg-primary-light/10
+              border border-primary-green/20
+              rounded-lg min-[320px]:rounded-xl
+              p-4 min-[320px]:p-5 min-[400px]:p-6 sm:p-8
+            ">
+              <h3 class="
+                font-semibold text-primary-text
+                text-base min-[320px]:text-lg min-[400px]:text-xl sm:text-2xl
+                mb-3 min-[320px]:mb-4
+              ">
+                What to Expect
+              </h3>
+              <p class="
+                font-normal text-primary-text
+                text-xs min-[320px]:text-sm min-[400px]:text-base sm:text-lg
+                leading-relaxed
+              ">
+                We typically respond within 1-2 business days. We'll review your inquiry and set up an initial conversation to understand your needs and explore how we can support your organization.
+              </p>
+            </div>
+          </div>
+        </div>
+      </Container>
+    </section>
+  </main>
+  
+  <Footer />
+</Layout>

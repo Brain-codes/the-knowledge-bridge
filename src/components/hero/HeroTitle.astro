@@ -1,0 +1,22 @@
+---
+import Heading from '../ui/Heading.astro';
+
+interface Props {
+  class?: string;
+}
+
+const { class: className = '' } = Astro.props;
+---
+
+<div class={`relative z-10 ${className}`}>
+  <Heading 
+    level="h1" 
+    size="3xl" 
+    weight="bold" 
+    color="text-primary-green"
+    align="center"
+    class="leading-tight text-xl min-[320px]:text-2xl min-[400px]:text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl px-2 min-[320px]:px-4"
+  >
+    Turning Insight into Action
+  </Heading>
+</div>

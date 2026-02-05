@@ -1,0 +1,51 @@
+---
+interface Props {
+  size?: 'xs' | 'sm' | 'base' | 'lg' | 'xl' | '2xl';
+  weight?: 'light' | 'normal' | 'medium' | 'semibold' | 'bold';
+  color?: string;
+  class?: string;
+  align?: 'left' | 'center' | 'right' | 'justify';
+  as?: 'p' | 'span' | 'div';
+}
+
+const { 
+  size = 'base',
+  weight = 'normal',
+  color = 'text-primary-text',
+  class: className = '',
+  align = 'left',
+  as = 'p'
+} = Astro.props as Props;
+
+const Tag = as;
+
+const sizes = {
+  xs: 'text-xs',
+  sm: 'text-sm',
+  base: 'text-base',
+  lg: 'text-lg',
+  xl: 'text-xl',
+  '2xl': 'text-2xl'
+};
+
+const weights = {
+  light: 'font-light',
+  normal: 'font-normal',
+  medium: 'font-medium',
+  semibold: 'font-semibold',
+  bold: 'font-bold'
+};
+
+const aligns = {
+  left: 'text-left',
+  center: 'text-center',
+  right: 'text-right',
+  justify: 'text-justify'
+};
+
+const classes = `${sizes[size]} ${weights[weight]} ${color} ${aligns[align]} ${className}`;
+---
+
+<Tag class={classes}>
+  <slot />
+</Tag>

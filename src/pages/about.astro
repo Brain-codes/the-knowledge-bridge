@@ -1,0 +1,223 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/navbar/Navbar.astro';
+import Container from '../components/ui/Container.astro';
+import ContentBlock from '../components/content/ContentBlock.astro';
+import Footer from '../components/footer/Footer.astro';
+
+const seo = {
+  title: "About Us",
+  description: "Learn about The Knowledge Bridge - our mission, approach, and commitment to turning insight into action for real-world impact.",
+  keywords: "knowledge bridge about, mission, approach, research to practice, evidence-based consulting",
+};
+
+const missionContent = {
+  title: "Our Mission",
+  description: "The Knowledge Bridge exists to close the gap between insight and action—ensuring that research, evidence, and strategy lead to decisions, programs, and policies that work in the real world."
+};
+
+const approachSections = [
+  {
+    subtitle: "Evidence-Informed",
+    text: "We ground our work in rigorous research and data, ensuring that insights are relevant, credible, and actionable."
+  },
+  {
+    subtitle: "Human-Centered",
+    text: "We design solutions with people at the center—understanding context, needs, and constraints to deliver what actually works in practice."
+  },
+  {
+    subtitle: "Implementation-Focused",
+    text: "We don't stop at strategy. We support organizations through design, capacity building, and adaptive delivery to achieve measurable outcomes."
+  },
+  {
+    subtitle: "Ethical & Transparent",
+    text: "We work with integrity, ensuring our solutions are not only effective but also equitable, sustainable, and aligned with institutional values."
+  }
+];
+
+const valuesContent = {
+  title: "What Drives Us",
+  description: "We believe that knowledge has power only when it translates into meaningful action. Organizations today face complex challenges that require more than insight—they need practical, implementable solutions that deliver results.\n\nWe are committed to working alongside leaders and practitioners to ensure that evidence informs decisions, strategies are grounded in reality, and programs achieve their intended impact."
+};
+---
+
+<Layout 
+  title={seo.title}
+  description={seo.description}
+  keywords={seo.keywords}
+>
+  <Navbar />
+  
+  <main class="relative">
+    <!-- Hero Section -->
+    <section class="w-full bg-primary-light/10 pt-[60px] min-[320px]:pt-[72px] min-[400px]:pt-[84px] sm:pt-[96px] md:pt-[119px]">
+      <Container 
+        maxWidth="full" 
+        padding="lg"
+        class="py-12 min-[320px]:py-16 min-[400px]:py-20 sm:py-24 md:py-28 lg:py-32"
+      >
+        <div class="max-w-4xl mx-auto text-center">
+          <div class="flex justify-center mb-6 min-[320px]:mb-8 min-[400px]:mb-10">
+            <svg width="47" height="46" viewBox="0 0 47 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M46.6601 22.9999C46.8808 22.9979 47 23 47 23C47 23 46.8806 23.0017 46.6601 22.9999C44.7835 23.0164 35.5656 23.3221 29.8233 27.6371C23.9488 32.0515 23.6097 43.7706 23.5944 45.7225C23.5959 45.9031 23.5944 46 23.5944 46C23.5944 46 23.593 45.903 23.5944 45.7225C23.5797 43.889 23.2586 33.4281 17.9317 28.1935C12.9209 23.2696 3.34226 22.9703 0.693615 22.9859C0.249828 23 0 23 0 23C0 23 0.249292 22.9885 0.693615 22.9859C3.43078 22.8989 13.5464 22.2754 17.9317 17.8065C23.0281 12.6129 23.5944 0 23.5944 0C23.5944 0 23.7831 12.0565 28.8795 17.621C33.4879 22.6526 44.5783 22.9828 46.6601 22.9999Z" fill="#005E02"/>
+            </svg>
+          </div>
+          
+          <h1 class="
+            font-bold text-primary-green
+            text-2xl min-[320px]:text-3xl min-[400px]:text-4xl sm:text-5xl md:text-6xl lg:text-7xl
+            leading-tight mb-6 min-[320px]:mb-8
+          ">
+            About The Knowledge Bridge
+          </h1>
+          
+          <p class="
+            font-normal text-primary-text
+            text-sm min-[320px]:text-base min-[400px]:text-lg sm:text-xl md:text-2xl
+            leading-relaxed
+          ">
+            Bridging the gap between insight and impact
+          </p>
+        </div>
+      </Container>
+    </section>
+
+    <!-- Mission Section -->
+    <section class="w-full bg-white">
+      <Container 
+        maxWidth="full" 
+        padding="lg"
+        class="py-12 min-[320px]:py-16 min-[400px]:py-20 sm:py-24 md:py-28 lg:py-32"
+      >
+        <div class="max-w-4xl mx-auto">
+          <ContentBlock 
+            title={missionContent.title}
+            description={missionContent.description}
+          />
+        </div>
+      </Container>
+    </section>
+
+    <!-- Approach Section -->
+    <section class="w-full bg-primary-text">
+      <Container 
+        maxWidth="full" 
+        padding="lg"
+        class="py-12 min-[320px]:py-16 min-[400px]:py-20 sm:py-24 md:py-28 lg:py-32"
+      >
+        <div class="flex flex-col gap-12 min-[320px]:gap-16 min-[400px]:gap-20 sm:gap-24">
+          <!-- Section Header -->
+          <div class="flex items-center gap-4 min-[320px]:gap-5">
+            <div class="flex-shrink-0">
+              <img
+                src="/images/star-icon-light.svg"
+                alt=""
+                class="w-8 h-8 min-[320px]:w-10 min-[320px]:h-10 sm:w-12 sm:h-12"
+                aria-hidden="true"
+              />
+            </div>
+            <h2 class="
+              font-medium text-white
+              text-xl min-[320px]:text-2xl min-[400px]:text-3xl sm:text-4xl md:text-5xl
+              leading-tight
+            ">
+              Our Approach
+            </h2>
+          </div>
+
+          <!-- Approach Cards Grid -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 min-[320px]:gap-8 min-[400px]:gap-10 sm:gap-12 md:gap-14">
+            {approachSections.map((section) => (
+              <div class="flex flex-col gap-3 min-[320px]:gap-4">
+                <h3 class="
+                  font-semibold text-primary-light
+                  text-base min-[320px]:text-lg min-[400px]:text-xl sm:text-2xl
+                ">
+                  {section.subtitle}
+                </h3>
+                <p class="
+                  font-normal text-white
+                  text-xs min-[320px]:text-sm min-[400px]:text-base sm:text-lg md:text-xl
+                  leading-relaxed
+                ">
+                  {section.text}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </Container>
+    </section>
+
+    <!-- Values Section -->
+    <section class="w-full bg-white">
+      <Container 
+        maxWidth="full" 
+        padding="lg"
+        class="py-12 min-[320px]:py-16 min-[400px]:py-20 sm:py-24 md:py-28 lg:py-32"
+      >
+        <div class="max-w-4xl mx-auto">
+          <ContentBlock 
+            title={valuesContent.title}
+            description={valuesContent.description}
+          />
+        </div>
+      </Container>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="w-full bg-primary-light/10">
+      <Container 
+        maxWidth="full" 
+        padding="lg"
+        class="py-12 min-[320px]:py-16 min-[400px]:py-20 sm:py-24 md:py-28 lg:py-32"
+      >
+        <div class="
+          bg-primary-text 
+          rounded-lg min-[320px]:rounded-xl
+          px-6 min-[320px]:px-8 min-[400px]:px-10 sm:px-14 md:px-16 lg:px-20
+          py-10 min-[320px]:py-12 min-[400px]:py-16 sm:py-20 md:py-24
+          flex flex-col items-center justify-center text-center
+          gap-6 min-[320px]:gap-8
+        ">
+          <h2 class="
+            font-semibold text-primary-green
+            text-xl min-[320px]:text-2xl min-[400px]:text-3xl sm:text-4xl md:text-5xl
+            leading-tight max-w-3xl
+          ">
+            Ready to Bridge the Gap?
+          </h2>
+          
+          <p class="
+            font-normal text-white
+            text-sm min-[320px]:text-base min-[400px]:text-lg sm:text-xl
+            leading-relaxed max-w-2xl
+          ">
+            Let's discuss how we can support your organization in moving from insight to action.
+          </p>
+
+          <a
+            href="/contact"
+            class="
+              inline-flex items-center justify-center
+              bg-primary-light/12 
+              border border-primary-green
+              rounded-md min-[320px]:rounded-lg
+              px-6 min-[320px]:px-8 min-[400px]:px-10 sm:px-12
+              py-3 min-[320px]:py-3.5 min-[400px]:py-4
+              font-bold text-primary-green
+              text-sm min-[320px]:text-base min-[400px]:text-lg
+              transition-all duration-200
+              hover:bg-primary-light/20 hover:scale-105
+              active:scale-95
+            "
+          >
+            Get in Touch
+          </a>
+        </div>
+      </Container>
+    </section>
+  </main>
+  
+  <Footer />
+</Layout>

@@ -1,0 +1,121 @@
+---
+import Container from '../ui/Container.astro';
+import ServiceCard from '../cards/ServiceCard.astro';
+
+interface Props {
+  class?: string;
+}
+
+const { class: className = '' } = Astro.props;
+
+const services = [
+  {
+    title: "Research & Evidence Generation",
+    description: "We design and conduct research that is decision-focused—producing insights that are relevant, timely, and usable by leaders and practitioners."
+  },
+  {
+    title: "Human-Centered Design & Innovation",
+    description: "We apply human-centered design to ensure solutions are shaped by the needs, experiences, and constraints of the people and systems involved."
+  },
+  {
+    title: "Program, Strategy & Policy Design",
+    description: "We support the design of programs, strategies, and policies that are clear, implementable, and aligned with institutional realities."
+  },
+  {
+    title: "Capacity Building, Training & Advisory",
+    description: "Through training and advisory support, we strengthen the ability of teams and institutions to apply knowledge, adapt strategies, and sustain impact over time."
+  }
+];
+---
+
+<section class={`w-full bg-primary-text ${className}`}>
+  <Container 
+    maxWidth="full" 
+    padding="lg"
+    class="py-8 min-[320px]:py-10 min-[400px]:py-12 sm:py-16 md:py-20 lg:py-24"
+  >
+    <!-- Section Header -->
+    <div class="mb-8 min-[320px]:mb-10 min-[400px]:mb-12 sm:mb-16 md:mb-20 lg:mb-24">
+      <!-- Title with Star Icon -->
+      <div class="flex items-start min-[400px]:items-center gap-3 min-[320px]:gap-4 min-[400px]:gap-5 mb-6 min-[320px]:mb-8 min-[400px]:mb-10 sm:mb-12 md:mb-16">
+        <!-- Star Icon -->
+        <div class="flex-shrink-0">
+          <img
+            src="/images/star-icon-light.svg"
+            alt=""
+            class="w-6 h-6 min-[320px]:w-8 min-[320px]:h-8 min-[400px]:w-10 min-[400px]:h-10 sm:w-11 sm:h-11 md:w-12 md:h-12"
+            aria-hidden="true"
+          />
+        </div>
+        
+        <!-- Title -->
+        <h2 class="
+          font-medium text-white
+          text-base min-[320px]:text-lg min-[400px]:text-xl sm:text-2xl md:text-3xl lg:text-4xl
+          leading-tight
+        ">
+          Where the Breakdown Happens
+        </h2>
+      </div>
+      
+      <!-- Background Image (no positioning) -->
+      <div class="w-full h-[286px] sm:h-[320px] md:h-[360px] lg:h-[404px] mb-6 min-[320px]:mb-8 min-[400px]:mb-10 sm:mb-12 md:mb-16 overflow-hidden rounded-lg">
+        <img
+          src="/images/collaboration-background.png"
+          alt=""
+          class="w-full h-full object-cover"
+          aria-hidden="true"
+        />
+      </div>
+
+      <!-- Description -->
+      <div class="w-full  md:pl-[50%] pl-0">
+        <p class=" w-full
+          text-white font-normal
+          text-xs min-[320px]:text-sm min-[400px]:text-base sm:text-lg md:text-xl
+          leading-relaxed
+          whitespace-pre-line
+        ">
+          {`To close this gap, organizations need more than insight. They need translation, design, and support for implementation.\n\nThe Knowledge Bridge was created to do exactly that.\n\nWe work with organizations to move from evidence to action—combining research, human-centered design, strategy, and capacity building to deliver solutions that are practical, ethical, and effective in the real world.`}
+        </p>
+      </div>
+    </div>
+
+    <!-- Second Section Header -->
+    <div class="mb-6 min-[320px]:mb-8 min-[400px]:mb-10 sm:mb-12 md:mb-16 text-center">
+      <div class="flex items-center justify-center gap-3 min-[320px]:gap-4 min-[400px]:gap-5">
+        <!-- Star Icon -->
+        <div class="flex-shrink-0">
+          <img
+            src="/images/star-icon-light.svg"
+            alt=""
+            class="w-6 h-6 min-[320px]:w-8 min-[320px]:h-8 min-[400px]:w-10 min-[400px]:h-10 sm:w-11 sm:h-11 md:w-12 md:h-12"
+            aria-hidden="true"
+          />
+        </div>
+        
+        <!-- Title -->
+        <h2 class="
+          font-medium text-white
+          text-base min-[320px]:text-lg min-[400px]:text-xl sm:text-2xl md:text-3xl lg:text-4xl
+          leading-tight
+        ">
+          How We Support Organizations
+        </h2>
+      </div>
+    </div>
+
+    <!-- Services Grid -->
+    <div class="
+      grid grid-cols-1 md:grid-cols-2
+      gap-4 min-[320px]:gap-5 min-[400px]:gap-6 sm:gap-8 md:gap-10 lg:gap-12
+    ">
+      {services.map(service => (
+        <ServiceCard 
+          title={service.title}
+          description={service.description}
+        />
+      ))}
+    </div>
+  </Container>
+</section>

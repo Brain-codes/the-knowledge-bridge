@@ -1,0 +1,17 @@
+---
+interface Props {
+  class?: string;
+}
+
+const { class: className = '' } = Astro.props;
+---
+
+<!-- 4-Point Star Icon -->
+<div class={`absolute ${className}`}>
+  <img 
+    src="/images/star-icon.svg" 
+    alt="" 
+    class="w-12 min-[320px]:w-14 min-[400px]:w-16 sm:w-20 md:w-24 lg:w-28 h-12 min-[320px]:h-14 min-[400px]:h-16 sm:h-20 md:h-24 lg:h-28"
+    aria-hidden="true"
+  />
+</div>

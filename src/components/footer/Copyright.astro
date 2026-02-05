@@ -1,0 +1,12 @@
+---
+interface Props {
+  year?: number | string;
+  organizationName: string;
+}
+
+const { year = new Date().getFullYear(), organizationName } = Astro.props;
+---
+
+<p class="text-white font-medium text-xxs min-[320px]:text-xs min-[400px]:text-sm sm:text-base md:text-lg lg:text-xl">
+  © {organizationName} {year}
+</p>

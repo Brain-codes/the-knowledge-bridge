@@ -1,0 +1,52 @@
+---
+import Container from '../ui/Container.astro';
+
+interface Props {
+  class?: string;
+}
+
+const { class: className = '' } = Astro.props;
+---
+
+<section class={`relative w-full bg-primary-light/10 overflow-hidden ${className}`}>
+  <!-- Large Star Decoration -->
+  <div class="absolute -left-20 min-[320px]:-left-16 min-[400px]:-left-12 sm:-left-8 md:left-0 lg:-left-32 top-2 opacity-100 pointer-events-none">
+    <img
+      src="/images/star-icon.svg"
+      alt=""
+      class="w-48 h-48 min-[320px]:w-64 min-[320px]:h-64 min-[400px]:w-80 min-[400px]:h-80 sm:w-96 sm:h-96 md:w-[500px] md:h-[500px] lg:w-[616px] lg:h-[616px] opacity-20"
+      aria-hidden="true"
+    />
+  </div>
+
+  <Container 
+    maxWidth="full" 
+    padding="lg"
+    class="relative z-10 py-10 min-[320px]:py-12 min-[400px]:py-16 sm:py-20 md:py-24 lg:py-28"
+  >
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 min-[320px]:gap-10 min-[400px]:gap-12 sm:gap-16 md:gap-20 lg:gap-24 items-center">
+      <!-- Left Column: Title -->
+      <div class="flex items-center justify-start lg:justify-start">
+        <h2 class="
+          font-semibold text-primary-text
+          text-xl min-[320px]:text-2xl min-[400px]:text-3xl sm:text-4xl md:text-5xl
+          leading-tight
+        ">
+          Impact That Lasts
+        </h2>
+      </div>
+
+      <!-- Right Column: Description -->
+      <div class="flex items-center">
+        <p class="
+          font-normal text-primary-text
+          text-xs min-[320px]:text-sm min-[400px]:text-base sm:text-lg md:text-xl lg:text-2xl
+          leading-relaxed
+          whitespace-pre-line
+        ">
+          {`When knowledge is effectively translated into action, organizations make better decisions, programs deliver stronger outcomes, and policies achieve their intended results.\n\nBy bridging insight and implementation, The Knowledge Bridge helps partners move beyond ideas—and toward impact that is measurable, meaningful, and sustainable.`}
+        </p>
+      </div>
+    </div>
+  </Container>
+</section>

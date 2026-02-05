@@ -1,0 +1,50 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/navbar/Navbar.astro';
+import HeroSection from '../components/hero/HeroSection.astro';
+import WhyKnowledgeSection from '../components/sections/WhyKnowledgeSection.astro';
+import ServicesSection from '../components/sections/ServicesSection.astro';
+import DecisionMakersSection from '../components/sections/DecisionMakersSection.astro';
+import ImpactSection from '../components/sections/ImpactSection.astro';
+import CTASection from '../components/sections/CTASection.astro';
+import Footer from '../components/footer/Footer.astro';
+
+// SEO Configuration - Update these with your actual content
+const seo = {
+  title: "Knowledge Bridge - Turning Insight into Action",
+  description: "We help organizations move from research, ideas, and evidence to practical strategies, programs, and policies that deliver real-world results. Trusted by corporates, development organizations, and public institutions.",
+  keywords: "knowledge bridge, research to practice, evidence-based solutions, organizational strategy, policy development, practical solutions",
+};
+---
+
+<Layout 
+  title={seo.title}
+  description={seo.description}
+  keywords={seo.keywords}
+>
+  <!-- Navigation -->
+  <Navbar />
+  
+  <main class="relative">
+    <!-- Hero Section -->
+    <HeroSection />
+    
+    <!-- Why Knowledge Section -->
+    <WhyKnowledgeSection />
+    
+    <!-- Services Section -->
+    <ServicesSection />
+    
+    <!-- Decision Makers Section -->
+    <DecisionMakersSection />
+    
+    <!-- Impact Section -->
+    <ImpactSection />
+    
+    <!-- CTA Section -->
+    <CTASection />
+  </main>
+  
+  <!-- Footer -->
+  <Footer />
+</Layout>

@@ -1,0 +1,125 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  keywords?: string;
+  ogImage?: string;
+  canonicalURL?: string;
+}
+
+const { 
+  title, 
+  description, 
+  keywords = "knowledge bridge, learning platform, education",
+  ogImage = "/og-image.jpg",
+  canonicalURL = Astro.url.toString()
+} = Astro.props;
+
+const siteTitle = `${title} | Knowledge Bridge`;
+
+// JSON-LD Structured Data for SEO
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://knowledge-bridge.com/#organization",
+      "name": "The Knowledge Bridge",
+      "url": "https://knowledge-bridge.com",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://knowledge-bridge.com/images/logo.png",
+        "width": 250,
+        "height": 60
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/knowledge-bridge"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "email": "hello@knowledgebridge.com",
+        "contactType": "Customer Service"
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://knowledge-bridge.com/#website",
+      "url": "https://knowledge-bridge.com",
+      "name": "The Knowledge Bridge",
+      "description": "We help organizations move from research, ideas, and evidence to practical strategies, programs, and policies that deliver real-world results.",
+      "publisher": {
+        "@id": "https://knowledge-bridge.com/#organization"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": canonicalURL + "#webpage",
+      "url": canonicalURL,
+      "name": siteTitle,
+      "description": description,
+      "isPartOf": {
+        "@id": "https://knowledge-bridge.com/#website"
+      },
+      "about": {
+        "@id": "https://knowledge-bridge.com/#organization"
+      }
+    }
+  ]
+};
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="theme-color" content="#005E02" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="generator" content={Astro.generator} />
+    
+    <!-- Primary Meta Tags -->
+    <title>{siteTitle}</title>
+    <meta name="title" content={siteTitle} />
+    <meta name="description" content={description} />
+    <meta name="keywords" content={keywords} />
+    <link rel="canonical" href={canonicalURL} />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:title" content={siteTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={new URL(ogImage, Astro.url)} />
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content={canonicalURL} />
+    <meta property="twitter:title" content={siteTitle} />
+    <meta property="twitter:description" content={description} />
+    <meta property="twitter:image" content={new URL(ogImage, Astro.url)} />
+    
+    <!-- Additional SEO -->
+    <meta name="robots" content="index, follow" />
+    <meta name="language" content="English" />
+    <meta name="revisit-after" content="7 days" />
+    <meta name="author" content="Knowledge Bridge" />
+    <link href="https://api.fontshare.com/v2/css?f[]=clash-display@200,400,700,600,500,300&display=swap" rel="stylesheet" />
+    
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+    <!-- Preconnect to external domains for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    
+    <!-- Clash Display Font -->
+    <link href="https://api.fontshare.com/v2/css?f[]=clash-display@200,400,700,600,500,300&display=swap" rel="stylesheet" />
+  </head>
+  <body class="min-h-screen bg-white text-gray-900 antialiased font-clash">
+    <slot />
+  </body>
+</html>

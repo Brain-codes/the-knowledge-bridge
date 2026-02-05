@@ -1,0 +1,26 @@
+<svg width="1728" height="1117" viewBox="0 0 1728 1117" fill="none"
+  xmlns="http://www.w3.org/2000/svg">
+  <!-- Background Pattern with Circular Elements -->
+  <rect width="1728" height="1117" fill="#FFFFFF" />
+
+  <!-- Grid Pattern of Circles -->
+  <g opacity="0.12">
+    <!-- Row 1 -->
+    <circle cx="100" cy="100" r="393.48" fill="rgba(21, 184, 0, 0.12)" />
+    <circle cx="557.86" cy="100" r="393.48" fill="rgba(21, 184, 0, 0.12)" />
+    <circle cx="1015.72" cy="100" r="393.48" fill="rgba(21, 184, 0, 0.12)" />
+    <circle cx="1473.58" cy="100" r="393.48" fill="rgba(21, 184, 0, 0.12)" />
+
+    <!-- Row 2 -->
+    <circle cx="100" cy="557.86" r="393.48" fill="rgba(21, 184, 0, 0.12)" />
+    <circle cx="557.86" cy="557.86" r="393.48" fill="rgba(21, 184, 0, 0.12)" />
+    <circle cx="1015.72" cy="557.86" r="393.48" fill="rgba(21, 184, 0, 0.12)" />
+    <circle cx="1473.58" cy="557.86" r="393.48" fill="rgba(21, 184, 0, 0.12)" />
+
+    <!-- Row 3 -->
+    <circle cx="100" cy="1015.72" r="393.48" fill="rgba(21, 184, 0, 0.12)" />
+    <circle cx="557.86" cy="1015.72" r="393.48" fill="rgba(21, 184, 0, 0.12)" />
+    <circle cx="1015.72" cy="1015.72" r="393.48" fill="rgba(21, 184, 0, 0.12)" />
+    <circle cx="1473.58" cy="1015.72" r="393.48" fill="rgba(21, 184, 0, 0.12)" />
+  </g>
+</svg>

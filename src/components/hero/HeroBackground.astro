@@ -1,0 +1,30 @@
+---
+interface Props {
+  class?: string;
+}
+
+const { class: className = '' } = Astro.props;
+---
+
+<!-- Hero Background with Pattern Overlay -->
+<div class={`absolute inset-0 overflow-hidden ${className}`}>
+  <!-- Background Pattern -->
+  <div class="absolute inset-0 opacity-100">
+    <img 
+      src="/images/background-pattern.svg" 
+      alt="" 
+      class="w-full h-full object-cover object-center"
+      aria-hidden="true"
+    />
+  </div>
+  
+  <!-- Bottom Image Section - Responsive height -->
+  <div class="absolute bottom-0 left-0 right-0 h-[40%] min-[320px]:h-[42%] min-[400px]:h-[45%] sm:h-[50%] md:h-[55%] lg:h-[58.5%]">
+    <img 
+      src="/images/hero-background.png" 
+      alt="" 
+      class="w-full h-full object-cover object-center"
+      aria-hidden="true"
+    />
+  </div>
+</div>

@@ -1,0 +1,17 @@
+---
+interface Props {
+  class?: string;
+}
+
+const { class: className = '' } = Astro.props;
+---
+
+<img
+  src="/images/logo.png"
+  alt="The Knowledge Base"
+  class={`
+    h-8 min-[320px]:h-10 min-[400px]:h-12 sm:h-14 md:h-14
+    w-auto object-contain
+    ${className}
+  `}
+/>

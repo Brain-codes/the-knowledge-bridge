@@ -1,0 +1,39 @@
+---
+import Container from '../ui/Container.astro';
+import HeroBackground from './HeroBackground.astro';
+import StarIcon from './StarIcon.astro';
+import HeroTitle from './HeroTitle.astro';
+import HeroDescription from './HeroDescription.astro';
+
+interface Props {
+  class?: string;
+}
+
+const { class: className = '' } = Astro.props;
+---
+
+<section class={`w-full h-screen overflow-hidden ${className}`}>
+  <!-- Background Pattern Overlay -->
+  <div class="w-full h-full flex flex-col">
+    <!-- Top Section: Text Content (takes remaining space) -->
+    <div class="flex-1 flex items-center justify-center">
+      <Container maxWidth="full" padding="lg" class="flex flex-col items-center justify-center pt-[60px] min-[320px]:pt-[72px] min-[400px]:pt-[84px] sm:pt-[96px] md:pt-[119px]">
+        <!-- Hero Title -->
+        <HeroTitle class="mb-4 min-[320px]:mb-5 min-[400px]:mb-6 sm:mb-8 md:mb-10 lg:mb-12" />
+        
+        <!-- Hero Description -->
+        <HeroDescription />
+      </Container>
+    </div>
+    
+    <!-- Bottom Section: Background Image -->
+    <div class="w-full h-[40%] min-[320px]:h-[42%] min-[400px]:h-[45%] sm:h-[50%] md:h-[55%] lg:h-[58.5%]">
+      <img 
+        src="/images/hero-background.png" 
+        alt="" 
+        class="w-full h-full object-cover object-center"
+        aria-hidden="true"
+      />
+    </div>
+  </div>
+</section>

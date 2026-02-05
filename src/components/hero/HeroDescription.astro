@@ -1,0 +1,21 @@
+---
+import Text from '../ui/Text.astro';
+
+interface Props {
+  class?: string;
+}
+
+const { class: className = '' } = Astro.props;
+---
+
+<div class={`relative z-10 ${className}`}>
+  <Text 
+    size="xl" 
+    weight="normal" 
+    color="text-primary-text"
+    align="center"
+    class="leading-relaxed max-w-5xl mx-auto text-xs min-[320px]:text-sm sm:text-base md:text-lg lg:text-xl px-2 min-[320px]:px-4 sm:px-6 md:px-8"
+  >
+    We help organizations move from research, ideas, and evidence to practical strategies, programs, and policies that deliver real-world results. Trusted by corporates, development organizations, and public institutions to design solutions that work in practice—not just on paper.
+  </Text>
+</div>

@@ -1,0 +1,21 @@
+---
+interface Props {
+  href: string;
+  isActive?: boolean;
+  class?: string;
+}
+
+const { href, isActive = false, class: className = '' } = Astro.props;
+---
+
+<a
+  href={href}
+  class={`
+    font-semibold transition-colors duration-200 hover:text-primary-green
+    text-[10px] min-[320px]:text-xs min-[400px]:text-sm sm:text-base
+    ${isActive ? 'text-primary-green' : 'text-primary-text'}
+    ${className}
+  `}
+>
+  <slot />
+</a>
