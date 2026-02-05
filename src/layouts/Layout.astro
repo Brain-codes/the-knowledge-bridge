@@ -111,7 +111,7 @@ const jsonLd = {
     <link href="https://api.fontshare.com/v2/css?f[]=clash-display@200,400,700,600,500,300&display=swap" rel="stylesheet" />
     
     <!-- JSON-LD Structured Data -->
-    <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+    <script type="application/ld+json" is:inline set:html={JSON.stringify(jsonLd)} />
     <!-- Preconnect to external domains for performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />

@@ -4,8 +4,13 @@ import sitemap from "@astrojs/sitemap";
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [tailwind(), sitemap()],
-  site: "https://knowledge-bridge.com", // Replace with your actual domain
+  integrations: [
+    tailwind(), 
+    sitemap({
+      filter: (page) => !page.includes('/404')
+    })
+  ],
+  site: "https://knowledge-bridge.com",
   build: {
     inlineStylesheets: "auto",
   },
