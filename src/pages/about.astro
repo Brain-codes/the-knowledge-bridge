@@ -27,7 +27,7 @@ const approachSections = [
   },
   {
     subtitle: "Implementation-Focused",
-    text: "We don't stop at strategy. We support organizations through design, capacity building, and adaptive delivery to achieve measurable outcomes."
+    text: "We do not stop at strategy. We support organizations through design, capacity building, and adaptive delivery to achieve measurable outcomes."
   },
   {
     subtitle: "Ethical & Transparent",
@@ -50,34 +50,137 @@ const valuesContent = {
   
   <main class="relative">
     <!-- Hero Section -->
-    <section class="w-full bg-primary-light/10 pt-[60px] min-[320px]:pt-[72px] min-[400px]:pt-[84px] sm:pt-[96px] md:pt-[119px]">
+    <section class="w-full bg-gradient-to-br from-primary-text via-primary-text to-primary-green/20 pt-[60px] min-[320px]:pt-[72px] min-[400px]:pt-[84px] sm:pt-[96px] md:pt-[119px] relative overflow-hidden">
+      <!-- Animated Grid Pattern -->
+      <div class="absolute inset-0 opacity-5 pointer-events-none">
+        <div class="absolute inset-0" style="background-image: linear-gradient(#005E02 1px, transparent 1px), linear-gradient(90deg, #005E02 1px, transparent 1px); background-size: 50px 50px;"></div>
+      </div>
+      
+      <!-- Floating Value Cards -->
+      <div class="absolute top-24 left-[5%] hidden xl:block" data-aos="zoom-in" data-aos-delay="300">
+        <div class="bg-white/10 backdrop-blur-md border border-primary-light/30 rounded-xl px-5 py-4 shadow-xl">
+          <div class="flex items-center gap-3">
+            <div class="w-12 h-12 bg-primary-green/20 rounded-lg flex items-center justify-center">
+              <svg class="w-6 h-6 text-primary-light" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+              </svg>
+            </div>
+            <div>
+              <div class="text-xs text-primary-light/70 font-medium">Commitment</div>
+              <div class="text-sm text-white font-semibold">Evidence-Informed</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="absolute top-40 right-[8%] hidden xl:block" data-aos="zoom-in" data-aos-delay="400">
+        <div class="bg-white/10 backdrop-blur-md border border-primary-light/30 rounded-xl px-5 py-4 shadow-xl">
+          <div class="flex items-center gap-3">
+            <div class="w-12 h-12 bg-primary-green/20 rounded-lg flex items-center justify-center">
+              <svg class="w-6 h-6 text-primary-light" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path>
+              </svg>
+            </div>
+            <div>
+              <div class="text-xs text-primary-light/70 font-medium">Approach</div>
+              <div class="text-sm text-white font-semibold">Human-Centered</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="absolute bottom-28 left-[10%] hidden xl:block" data-aos="zoom-in" data-aos-delay="500">
+        <div class="bg-white/10 backdrop-blur-md border border-primary-light/30 rounded-xl px-5 py-4 shadow-xl">
+          <div class="flex items-center gap-3">
+            <div class="w-12 h-12 bg-primary-green/20 rounded-lg flex items-center justify-center">
+              <svg class="w-6 h-6 text-primary-light" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+              </svg>
+            </div>
+            <div>
+              <div class="text-xs text-primary-light/70 font-medium">Focus</div>
+              <div class="text-sm text-white font-semibold">Implementation</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Geometric Accents -->
+      <div class="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-transparent via-primary-green to-transparent opacity-50"></div>
+      <div class="absolute top-1/4 right-0 w-2 h-64 bg-gradient-to-b from-primary-light to-transparent opacity-30"></div>
+      <div class="absolute bottom-1/4 left-0 w-2 h-48 bg-gradient-to-b from-transparent to-primary-light opacity-30"></div>
+      
       <Container 
         maxWidth="full" 
         padding="lg"
-        class="py-12 min-[320px]:py-16 min-[400px]:py-20 sm:py-24 md:py-28 lg:py-32"
+        class="py-12 min-[320px]:py-16 min-[400px]:py-20 sm:py-24 md:py-28 lg:py-32 relative z-10"
       >
-        <div class="max-w-4xl mx-auto text-center">
-          <div class="flex justify-center mb-6 min-[320px]:mb-8 min-[400px]:mb-10" data-aos="fade-down">
-            <svg width="47" height="46" viewBox="0 0 47 46" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M46.6601 22.9999C46.8808 22.9979 47 23 47 23C47 23 46.8806 23.0017 46.6601 22.9999C44.7835 23.0164 35.5656 23.3221 29.8233 27.6371C23.9488 32.0515 23.6097 43.7706 23.5944 45.7225C23.5959 45.9031 23.5944 46 23.5944 46C23.5944 46 23.593 45.903 23.5944 45.7225C23.5797 43.889 23.2586 33.4281 17.9317 28.1935C12.9209 23.2696 3.34226 22.9703 0.693615 22.9859C0.249828 23 0 23 0 23C0 23 0.249292 22.9885 0.693615 22.9859C3.43078 22.8989 13.5464 22.2754 17.9317 17.8065C23.0281 12.6129 23.5944 0 23.5944 0C23.5944 0 23.7831 12.0565 28.8795 17.621C33.4879 22.6526 44.5783 22.9828 46.6601 22.9999Z" fill="#005E02"/>
-            </svg>
+        <div class="max-w-6xl mx-auto">
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+            <!-- Left Side - Visual Element -->
+            <div class="order-2 lg:order-1" data-aos="fade-right" data-aos-delay="200">
+              <div class="relative">
+                <!-- Large Star with Border -->
+                <div class="relative inline-block">
+                  <div class="absolute inset-0 bg-primary-green/10 blur-3xl rounded-full"></div>
+                  <img
+                    src="/images/star-icon-light.svg"
+                    alt=""
+                    class="relative w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96"
+                    aria-hidden="true"
+                  />
+                </div>
+                
+                <!-- Connecting Lines -->
+                <svg class="absolute top-0 left-0 w-full h-full opacity-20" viewBox="0 0 400 400">
+                  <circle cx="200" cy="200" r="150" fill="none" stroke="#71B06C" stroke-width="2" stroke-dasharray="10,10" class="animate-spin" style="animation-duration: 20s;"/>
+                  <circle cx="200" cy="200" r="100" fill="none" stroke="#71B06C" stroke-width="1" stroke-dasharray="5,5" class="animate-spin" style="animation-duration: 15s; animation-direction: reverse;"/>
+                </svg>
+              </div>
+            </div>
+            
+            <!-- Right Side - Content -->
+            <div class="order-1 lg:order-2">
+              <div class="flex items-center gap-4 mb-6 min-[320px]:mb-8" data-aos="fade-left">
+                <svg width="47" height="46" viewBox="0 0 47 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M46.6601 22.9999C46.8808 22.9979 47 23 47 23C47 23 46.8806 23.0017 46.6601 22.9999C44.7835 23.0164 35.5656 23.3221 29.8233 27.6371C23.9488 32.0515 23.6097 43.7706 23.5944 45.7225C23.5959 45.9031 23.5944 46 23.5944 46C23.5944 46 23.593 45.903 23.5944 45.7225C23.5797 43.889 23.2586 33.4281 17.9317 28.1935C12.9209 23.2696 3.34226 22.9703 0.693615 22.9859C0.249828 23 0 23 0 23C0 23 0.249292 22.9885 0.693615 22.9859C3.43078 22.8989 13.5464 22.2754 17.9317 17.8065C23.0281 12.6129 23.5944 0 23.5944 0C23.5944 0 23.7831 12.0565 28.8795 17.621C33.4879 22.6526 44.5783 22.9828 46.6601 22.9999Z" fill="#71B06C"/>
+                </svg>
+                <span class="font-semibold text-primary-light text-sm uppercase tracking-wider">Who We Are</span>
+              </div>
+              
+              <h1 class="
+                font-bold text-primary-green
+                text-2xl min-[320px]:text-3xl min-[400px]:text-4xl sm:text-5xl md:text-6xl lg:text-7xl
+                leading-tight mb-6 min-[320px]:mb-8
+              " data-aos="fade-up" data-aos-delay="100">
+                Bridging <span class="text-white">Insight</span> and Action
+              </h1>
+              
+              <p class="
+                font-normal text-white
+                text-sm min-[320px]:text-base min-[400px]:text-lg sm:text-xl
+                leading-relaxed mb-8
+              " data-aos="fade-up" data-aos-delay="200">
+                We exist to close the gap between knowledge and implementation—ensuring research, evidence, and strategy lead to meaningful results in the real world.
+              </p>
+              
+              <!-- Stats -->
+              <div class="grid grid-cols-3 gap-6" data-aos="fade-up" data-aos-delay="300">
+                <div class="text-center lg:text-left">
+                  <div class="text-3xl md:text-4xl font-bold text-primary-light mb-1">4</div>
+                  <div class="text-xs text-white/70">Core Values</div>
+                </div>
+                <div class="text-center lg:text-left">
+                  <div class="text-3xl md:text-4xl font-bold text-primary-light mb-1">∞</div>
+                  <div class="text-xs text-white/70">Impact Potential</div>
+                </div>
+                <div class="text-center lg:text-left">
+                  <div class="text-3xl md:text-4xl font-bold text-primary-light mb-1">1</div>
+                  <div class="text-xs text-white/70">Mission</div>
+                </div>
+              </div>
+            </div>
           </div>
-          
-          <h1 class="
-            font-bold text-primary-green
-            text-2xl min-[320px]:text-3xl min-[400px]:text-4xl sm:text-5xl md:text-6xl lg:text-7xl
-            leading-tight mb-6 min-[320px]:mb-8
-          " data-aos="fade-up" data-aos-delay="100">
-            About The Knowledge Bridge
-          </h1>
-          
-          <p class="
-            font-normal text-primary-text
-            text-sm min-[320px]:text-base min-[400px]:text-lg sm:text-xl md:text-2xl
-            leading-relaxed
-          " data-aos="fade-up" data-aos-delay="200">
-            Bridging the gap between insight and impact
-          </p>
         </div>
       </Container>
     </section>
@@ -99,11 +202,21 @@ const valuesContent = {
     </section>
 
     <!-- Approach Section -->
-    <section class="w-full bg-primary-text">
+    <section class="w-full bg-primary-text relative overflow-hidden">
+      <!-- Decorative Star Background -->
+      <div class="absolute -right-20 top-10 opacity-10 pointer-events-none">
+        <img
+          src="/images/star-icon-light.svg"
+          alt=""
+          class="w-64 h-64 lg:w-96 lg:h-96"
+          aria-hidden="true"
+        />
+      </div>
+      
       <Container 
         maxWidth="full" 
         padding="lg"
-        class="py-12 min-[320px]:py-16 min-[400px]:py-20 sm:py-24 md:py-28 lg:py-32"
+        class="py-12 min-[320px]:py-16 min-[400px]:py-20 sm:py-24 md:py-28 lg:py-32 relative z-10"
       >
         <div class="flex flex-col gap-12 min-[320px]:gap-16 min-[400px]:gap-20 sm:gap-24">
           <!-- Section Header -->
@@ -127,8 +240,15 @@ const valuesContent = {
 
           <!-- Approach Cards Grid -->
           <div class="grid grid-cols-1 md:grid-cols-2 gap-6 min-[320px]:gap-8 min-[400px]:gap-10 sm:gap-12 md:gap-14">
-            {approachSections.map((section) => (
-              <div class="flex flex-col gap-3 min-[320px]:gap-4" data-aos="fade-up">
+            {approachSections.map((section, index) => (
+              <div class="
+                flex flex-col gap-3 min-[320px]:gap-4
+                bg-white/5 backdrop-blur-sm
+                border border-primary-light/20
+                rounded-lg p-6 min-[320px]:p-7 min-[400px]:p-8
+                transition-all duration-300
+                hover:bg-white/10 hover:border-primary-light/40 hover:transform hover:scale-105
+              " data-aos="fade-up" data-aos-delay={index * 100}>
                 <h3 class="
                   font-semibold text-primary-light
                   text-base min-[320px]:text-lg min-[400px]:text-xl sm:text-2xl
@@ -166,54 +286,86 @@ const valuesContent = {
     </section>
 
     <!-- CTA Section -->
-    <section class="w-full bg-primary-light/10">
+    <section class="w-full bg-primary-light/10 relative overflow-hidden">
+      <!-- Decorative Element -->
+      <div class="absolute -right-32 -bottom-20 opacity-5 pointer-events-none">
+        <img
+          src="/images/star-icon.svg"
+          alt=""
+          class="w-96 h-96 lg:w-[600px] lg:h-[600px]"
+          aria-hidden="true"
+        />
+      </div>
+      
       <Container 
         maxWidth="full" 
         padding="lg"
-        class="py-12 min-[320px]:py-16 min-[400px]:py-20 sm:py-24 md:py-28 lg:py-32"
+        class="py-12 min-[320px]:py-16 min-[400px]:py-20 sm:py-24 md:py-28 lg:py-32 relative z-10"
       >
         <div class="
-          bg-primary-text 
+          bg-gradient-to-br from-primary-text to-primary-text/90
           rounded-lg min-[320px]:rounded-xl
           px-6 min-[320px]:px-8 min-[400px]:px-10 sm:px-14 md:px-16 lg:px-20
           py-10 min-[320px]:py-12 min-[400px]:py-16 sm:py-20 md:py-24
           flex flex-col items-center justify-center text-center
           gap-6 min-[320px]:gap-8
+          shadow-2xl
+          relative overflow-hidden
         " data-aos="zoom-in">
-          <h2 class="
-            font-semibold text-primary-green
-            text-xl min-[320px]:text-2xl min-[400px]:text-3xl sm:text-4xl md:text-5xl
-            leading-tight max-w-3xl
-          ">
-            Ready to Bridge the Gap?
-          </h2>
+          <!-- Decorative Pattern -->
+          <div class="absolute top-0 right-0 opacity-10 pointer-events-none">
+            <img
+              src="/images/star-icon-light.svg"
+              alt=""
+              class="w-48 h-48"
+              aria-hidden="true"
+            />
+          </div>
+          <div class="absolute bottom-0 left-0 opacity-10 pointer-events-none">
+            <img
+              src="/images/star-icon-light.svg"
+              alt=""
+              class="w-32 h-32"
+              aria-hidden="true"
+            />
+          </div>
           
-          <p class="
-            font-normal text-white
-            text-sm min-[320px]:text-base min-[400px]:text-lg sm:text-xl
-            leading-relaxed max-w-2xl
-          ">
-            Let's discuss how we can support your organization in moving from insight to action.
-          </p>
+          <div class="relative z-10 flex flex-col gap-6 min-[320px]:gap-8 items-center">
+            <h2 class="
+              font-semibold text-primary-green
+              text-xl min-[320px]:text-2xl min-[400px]:text-3xl sm:text-4xl md:text-5xl
+              leading-tight max-w-3xl
+            ">
+              Ready to Bridge the Gap?
+            </h2>
+            
+            <p class="
+              font-normal text-white
+              text-sm min-[320px]:text-base min-[400px]:text-lg sm:text-xl
+              leading-relaxed max-w-2xl
+            ">
+              Let us discuss how we can support your organization in moving from insight to action.
+            </p>
 
-          <a
-            href="/contact"
-            class="
-              inline-flex items-center justify-center
-              bg-primary-light/12 
-              border border-primary-green
-              rounded-md min-[320px]:rounded-lg
-              px-6 min-[320px]:px-8 min-[400px]:px-10 sm:px-12
-              py-3 min-[320px]:py-3.5 min-[400px]:py-4
-              font-bold text-primary-green
-              text-sm min-[320px]:text-base min-[400px]:text-lg
-              transition-all duration-200
-              hover:bg-primary-light/20 hover:scale-105
-              active:scale-95
-            "
-          >
-            Get in Touch
-          </a>
+            <a
+              href="/contact"
+              class="
+                inline-flex items-center justify-center
+                bg-primary-light/12 
+                border-2 border-primary-green
+                rounded-md min-[320px]:rounded-lg
+                px-8 min-[320px]:px-10 min-[400px]:px-12 sm:px-14
+                py-3 min-[320px]:py-3.5 min-[400px]:py-4 sm:py-4.5
+                font-bold text-primary-green
+                text-sm min-[320px]:text-base min-[400px]:text-lg
+                transition-all duration-300
+                hover:bg-primary-green hover:text-white hover:scale-105 hover:shadow-lg
+                active:scale-95
+              "
+            >
+              Get in Touch
+            </a>
+          </div>
         </div>
       </Container>
     </section>

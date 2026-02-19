@@ -121,6 +121,16 @@ const jsonLd = {
     
     <!-- AOS Animation CSS -->
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    
+    <!-- Font Size Adjustment for High DPI/Display Scaling Compensation -->
+    <style is:global>
+      html {
+        /* Reduces text size by 15% to compensate for 125% Windows display scaling
+           At 125% scaling: 0.85 × 1.25 ≈ 1.06 (slightly larger than normal)
+           At 100% scaling: 0.85 × 1.0 = 0.85 (optimized for readability) */
+        font-size: 85%;
+      }
+    </style>
   </head>
   <body class="min-h-screen bg-white text-gray-900 antialiased font-clash">
     <slot />

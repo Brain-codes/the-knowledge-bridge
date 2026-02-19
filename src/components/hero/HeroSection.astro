@@ -15,17 +15,66 @@ const { class: className = '' } = Astro.props;
   <div class="w-full h-full flex flex-col">
     <!-- Top Section: Text Content (takes remaining space) -->
     <div class="flex-1 flex items-center justify-center">
-      <Container maxWidth="full" padding="lg" class="flex flex-col items-center justify-center pt-[60px] min-[320px]:pt-[72px] min-[400px]:pt-[84px] sm:pt-[96px] md:pt-[119px]">
+      <Container maxWidth="full" padding="lg" class="flex flex-col items-center justify-center ">
         <!-- Hero Title -->
-        <HeroTitle class="mb-4 min-[320px]:mb-5 min-[400px]:mb-6 sm:mb-8 md:mb-10 lg:mb-12" />
+        <HeroTitle class="mb-3 min-[320px]:mb-4 min-[400px]:mb-5 sm:mb-6 md:mb-7" />
+        
+        <!-- Hero Subheadline -->
+        <p class="
+          text-primary-text font-semibold text-center
+          text-sm min-[320px]:text-base sm:text-lg md:text-xl lg:text-2xl
+          md:!leading-relaxed !leading-[18px] max-w-4xl mx-auto px-2 min-[320px]:px-4 sm:px-6 md:px-8
+          mb-4 min-[320px]:mb-5 min-[400px]:mb-6 sm:mb-7 md:mb-8
+        " data-aos="fade-up" data-aos-delay="150">
+          Make better decisions, implement stronger programs, and achieve measurable impact.
+        </p>
         
         <!-- Hero Description -->
         <HeroDescription />
+        
+        <!-- CTA Buttons -->
+        <div class="flex flex-col sm:flex-row gap-4 min-[320px]:gap-5 sm:gap-6 md:gap-8 mt-6 min-[320px]:mt-7 min-[400px]:mt-8 sm:mt-10 md:mt-12" data-aos="fade-up" data-aos-delay="300 mb-4">
+          <a
+            href="/contact"
+            class="
+              inline-flex items-center justify-center
+              bg-primary-text
+              rounded-md min-[320px]:rounded-lg
+              px-6 min-[320px]:px-8 min-[400px]:px-10 sm:px-12
+              py-3 min-[320px]:py-3.5 min-[400px]:py-4
+              font-bold text-white
+              text-sm min-[320px]:text-base min-[400px]:text-lg
+              transition-all duration-200
+              hover:bg-primary-green hover:scale-105
+              active:scale-95
+            "
+          >
+            Request a Consultation
+          </a>
+          <a
+            href="#services"
+            class="
+              inline-flex items-center justify-center
+              bg-white
+              border-2 border-primary-text
+              rounded-md min-[320px]:rounded-lg
+              px-6 min-[320px]:px-8 min-[400px]:px-10 sm:px-12
+              py-3 min-[320px]:py-3.5 min-[400px]:py-4
+              font-bold text-primary-text
+              text-sm min-[320px]:text-base min-[400px]:text-lg
+              transition-all duration-200
+              hover:bg-primary-light/10 hover:scale-105
+              active:scale-95
+            "
+          >
+            View Services
+          </a>
+        </div>
       </Container>
     </div>
     
     <!-- Bottom Section: Background Image -->
-    <div class="w-full h-[40%] min-[320px]:h-[42%] min-[400px]:h-[45%] sm:h-[50%] md:h-[55%] lg:h-[58.5%]">
+    <div class="w-full h-[40%] min-[320px]:h-[42%] min-[400px]:h-[45%] sm:h-[50%] md:h-[55%] lg:h-[50%]">
       <img 
         src="/images/hero-background.png" 
         alt="" 
